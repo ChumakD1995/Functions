@@ -55,10 +55,17 @@ function fillArray () {
     return mainArray;
 }
 
-function (str, chars) {
-  for (let i = 0; i < chars.lenght; i++) {
-    let regex = new RegExp (chars[i], "n");
-    str = str.replace (regex, "");
+function removeChars() {
+  const str = prompt("Введіть рядок: ");
+  const charsToRemove = prompt("Введіть символ, який потрібно видалити: ");
+
+  for (let i = 0; i < charsToRemove.length; i++) {
+    const regex = new RegExp (charsToRemove[i], "n");
+    str = str.replace(regex, "");
   }
-  return str;
+
+  alert(`Результат: ${str}`);
 }
+
+removeChars();
+
