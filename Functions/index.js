@@ -56,11 +56,11 @@ function fillArray () {
 }
 
 function removeChars() {
-  const str = prompt("Введіть рядок: ");
+  let str = prompt("Введіть рядок: ");
   const charsToRemove = prompt("Введіть символ, який потрібно видалити: ");
 
   for (let i = 0; i < charsToRemove.length; i++) {
-    const regex = new RegExp (charsToRemove[i], "n");
+    const regex = new RegExp (charsToRemove[i], "g");
     str = str.replace(regex, "");
   }
 
@@ -68,4 +68,3 @@ function removeChars() {
 }
 
 removeChars();
-
